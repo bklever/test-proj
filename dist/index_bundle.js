@@ -67,15 +67,8 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+(function webpackMissingModule() { throw new Error("Cannot find module \"./src/index.js\""); }());
 
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-var str = 'bar';
-console.log(`foo ${str}`);
 
 /***/ })
 /******/ ]);

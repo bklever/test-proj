@@ -1,1 +1,1 @@
-Testing
+Test project for learning React
