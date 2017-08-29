@@ -1,0 +1,30 @@
+{
+  "name": "test-proj",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bklever/test-proj.git"
+  },
+  "author": "Ben Kleverlaan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bklever/test-proj/issues"
+  },
+  "homepage": "https://github.com/bklever/test-proj#readme"
+}
