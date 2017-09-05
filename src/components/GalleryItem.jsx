@@ -10,7 +10,7 @@ export default class GalleryItem extends React.Component {
         return (
             <div>
             <img src={this.props.src} alt={this.props.title} />
-            <input type="button" value="More info"/>    
+            <input type="button" value={this.props.title}/>    
             </div>
         );
     }

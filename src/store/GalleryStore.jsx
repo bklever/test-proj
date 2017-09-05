@@ -1,5 +1,7 @@
 import { EventEmitter } from "events";
 
+import dispatcher from '../dispatcher';
+
 class GalleryStore extends EventEmitter {
     constructor() {
         super();
@@ -20,18 +22,28 @@ class GalleryStore extends EventEmitter {
     getAll() {
         return this.galleryItems;
     }
-    createGalleryItem(src,title) {
+    createGalleryItem({src = "http://wiseheartdesign.com/images/articles/default-avatar.png",title = "Default Title", id=Math.random()} = {}) {
         this.galleryItems.push(
             {
-                id: Math.random,
+                id,
                 src,
                 title
             }
         );
         this.emit("change");
     }
+
+    handleActions(action) {
+        switch(action.type) {
+            case "CREATE_TODO": {
+                this.createGalleryItem(action);
+            }
+        }
+        console.log("action got",action);
+    }
 }
 const galleryStore = new GalleryStore;
+dispatcher.register(galleryStore.handleActions.bind(galleryStore));
 //dispatcher.register(galleryStore.handleActions.bind(galleryStore));
-
+window.dispatcher = dispatcher;
 export default galleryStore;
